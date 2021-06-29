@@ -1,6 +1,11 @@
 def is_anagram(first_string: str, second_string: str) -> bool:
-    """
-    Given two strings, this functions determines if they are an anagram of one another.
-    """
-    pass  # remove pass statement and implement me
+    no_space_first = first_string.replace(" ", "")
+    no_space_second = second_string.replace(" ", "")
 
+    alphabet_first = sorted(no_space_first)
+    alphabet_second = sorted(no_space_second)
+
+    if alphabet_first == alphabet_second:
+        return True
+    else:
+        return False

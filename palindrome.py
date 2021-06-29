@@ -1,8 +1,8 @@
 def is_palindrome(value: str) -> bool:
-    """
-    This function determines if a word or phrase is a palindrome
+    no_space = value.replace(" ", "")
+    lower_case = no_space.lower()
 
-    :param value: A string
-    :return: A boolean
-    """
-    pass  # remove pass statement and implement me
+    if lower_case[::-1] == lower_case:
+        return True
+    else:
+        return False
